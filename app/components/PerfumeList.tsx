@@ -24,12 +24,14 @@ const perfumes = [
   }
 ];
 
-export const PerfumeList = () => {
+export const PerfumeList = ({
+  perfumesList = perfumes
+}) => {
   return (
     <div className="container mx-auto px-4 py-16">
       <h2 className="text-3xl font-light text-charcoal mb-8">Our Collection</h2>
       <div className="max-h-[600px] overflow-y-auto pr-4 space-y-6">
-        {perfumes.map((perfume) => (
+        {perfumesList.map((perfume) => (
           <div
             key={perfume.name}
             className="flex gap-6 p-4 bg-white rounded-lg shadow-xs hover:shadow-md transition-shadow"
